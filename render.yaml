@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: ecocart-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      # You will need to manually add MONGODB_URI in the Render Dashboard
+      - key: MONGODB_URI
+        sync: false 
+      - key: JWT_SECRET
+        sync: false
+
+  - type: web
+    name: ecocart-ml-service
+    env: python
+    rootDir: ml-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
