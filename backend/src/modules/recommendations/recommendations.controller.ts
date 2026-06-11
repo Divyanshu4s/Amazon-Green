@@ -15,7 +15,7 @@ export const RecommendationsController = {
       
       // Auto-log views
       feed.forEach(f => {
-        RecommendationTrackingService.logInteraction((req as any).user.id, f.product._id, RecommendationType.PERSONALIZED, 'view', f.product.ecoScore, f.mlMetrics.clickProbability);
+        if(f.product) RecommendationTrackingService.logInteraction((req as any).user.id, f.product._id, RecommendationType.PERSONALIZED, 'view', f.product.ecoScore, f.mlMetrics.clickProbability);
       });
 
       res.status(200).json({ status: 'success', data: feed });
@@ -24,10 +24,10 @@ export const RecommendationsController = {
 
   async getAlternatives(req: Request, res: Response, next: NextFunction) {
     try {
-      const alternatives = await GreenerAlternativeService.getAlternatives(req.params.productId);
+      const alternatives = await GreenerAlternativeService.getAlternatives(req.params.productId as string);
       
       alternatives.forEach(a => {
-        RecommendationTrackingService.logInteraction((req as any).user.id, a.product._id, RecommendationType.ALTERNATIVE, 'view', a.product.ecoScore, 0.8);
+        if(a.product) RecommendationTrackingService.logInteraction((req as any).user.id, a.product._id, RecommendationType.ALTERNATIVE, 'view', a.product.ecoScore, 0.8);
       });
 
       res.status(200).json({ status: 'success', data: alternatives });

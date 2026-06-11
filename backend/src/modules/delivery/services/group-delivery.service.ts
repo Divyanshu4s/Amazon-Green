@@ -10,7 +10,7 @@ export class GroupDeliveryService {
    */
   static async createClusters(pendingOrders: any[], radiusKm = 2) {
     const clusters = DeliveryClusterEngine.generateClusters(pendingOrders, radiusKm);
-    const createdGroups = [];
+    const createdGroups: any[] = [];
 
     for (const cluster of clusters) {
       if (cluster.waypoints.length > 1) { // Only save if it actually grouped multiple people

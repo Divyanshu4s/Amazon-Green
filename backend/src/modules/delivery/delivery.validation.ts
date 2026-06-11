@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { VehicleType } from '../types';
+import { VehicleType } from './types';
 
 export const routeRequestSchema = z.object({
   body: z.object({

@@ -11,7 +11,7 @@ export class GreenerAlternativeService {
     
     // We only want products that actually have a HIGHER EcoScore
     // Assuming the base product has some EcoScore, but Content engine sorts by ecoScore DESC
-    const alternatives = [];
+    const alternatives: any[] = [];
 
     for (const alt of candidates) {
       // Get the exact carbon savings

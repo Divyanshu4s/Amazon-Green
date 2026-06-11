@@ -34,21 +34,21 @@ export const AuditController = {
 
   async getStatus(req: Request, res: Response, next: NextFunction) {
     try {
-      const status = await AuditRequestService.getStatus(req.params.sellerId);
+      const status = await AuditRequestService.getStatus(req.params.sellerId as string);
       res.status(200).json({ status: 'success', data: status });
     } catch (error) { next(error); }
   },
 
   async getHistory(req: Request, res: Response, next: NextFunction) {
     try {
-      const history = await AuditHistoryService.getHistory(req.params.sellerId);
+      const history = await AuditHistoryService.getHistory(req.params.sellerId as string);
       res.status(200).json({ status: 'success', data: history });
     } catch (error) { next(error); }
   },
 
   async getImprovements(req: Request, res: Response, next: NextFunction) {
     try {
-      const insights = await SellerImprovementService.generateInsights(req.params.sellerId);
+      const insights = await SellerImprovementService.generateInsights(req.params.sellerId as string);
       res.status(200).json({ status: 'success', data: { insights } });
     } catch (error) { next(error); }
   },

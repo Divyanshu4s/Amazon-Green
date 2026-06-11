@@ -26,7 +26,7 @@ export class HybridRecommendationService {
       }
     });
 
-    const scoredCandidates = [];
+    const scoredCandidates: any[] = [];
 
     // 2. Apply Sustainability Boosts
     for (const [id, data] of Array.from(rawMap.entries())) {

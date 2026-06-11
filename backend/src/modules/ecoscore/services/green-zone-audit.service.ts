@@ -19,8 +19,8 @@ export class GreenZoneAuditService {
     const result: EcoScoreResult = EcoScoreService.calculateScore(dto);
 
     // Determine strengths and weaknesses
-    const strengths = [];
-    const weaknesses = [];
+    const strengths: string[] = [];
+    const weaknesses: string[] = [];
 
     if (result.breakdown.material >= 80) strengths.push('Excellent sustainable material sourcing.');
     else if (result.breakdown.material < 40) weaknesses.push('High reliance on non-renewable or virgin materials.');
