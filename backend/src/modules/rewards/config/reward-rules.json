@@ -1,0 +1,8 @@
+{
+  "ecoScore_gt_90": { "coins": 25, "credits": 5 },
+  "ecoScore_gt_80": { "coins": 15, "credits": 2 },
+  "group_delivery": { "coins": 20, "credits": 3 },
+  "minimal_packaging": { "coins": 10, "credits": 1 },
+  "local_product": { "coins": 15, "credits": 2 },
+  "verified_green_seller": { "coins": 10, "credits": 1 }
+}

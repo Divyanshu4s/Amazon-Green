@@ -1,0 +1,11 @@
+{
+  "verified_certification": 15,
+  "compostable_packaging": 10,
+  "carbon_neutral_shipping": 10,
+  "sustainable_products_high": 20,
+  "local_fulfillment_high": 10,
+  "plastic_percentage_above_80": -20,
+  "missing_certifications": -10,
+  "high_return_rate": -5,
+  "poor_customer_eco_rating": -15
+}

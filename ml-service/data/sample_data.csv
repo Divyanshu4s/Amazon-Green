@@ -1,0 +1,11 @@
+product_name,category,material_type,recycled_content_percent,recyclable,reusable,repairable,lifespan_years,warranty_years,reuse_cycles,packaging_type,plastic_percentage,shipping_distance,energy_saving,water_saving,waste_reduction,seller_score,eco_score
+Bamboo Toothbrush,Home,Bamboo,0,1,0,0,0.5,0,0,Compostable,0,50,0,0,1,90,92
+LED Bulb,Electronics,Recycled Metal,20,1,1,0,10,5,0,Recycled Cardboard,5,150,1,0,1,85,88
+Single Use Water Bottle,Kitchen,Single Use Plastic,0,1,0,0,0.1,0,0,Plastic Heavy,100,500,0,0,0,40,15
+Organic Cotton T-Shirt,Apparel,Organic Cotton,0,1,1,1,3,1,50,Paper,0,100,0,1,0,80,85
+Premium Smartphone,Electronics,Recycled Metal,40,1,1,1,4,2,0,Mixed Packaging,30,1200,1,0,0,70,65
+Plastic Cutlery Set,Kitchen,Mixed Plastic,0,0,0,0,0.05,0,0,Plastic Heavy,100,300,0,0,0,30,10
+Reusable Steel Bottle,Kitchen,Recycled Metal,50,1,1,1,15,5,1000,Recycled Cardboard,0,80,0,0,1,95,95
+Fast Fashion Jeans,Apparel,Organic Cotton,0,0,1,0,1,0,20,Plastic Heavy,90,2000,0,0,0,50,45
+Solar Power Bank,Electronics,Recycled Metal,30,1,1,1,5,2,500,Recycled Cardboard,10,400,1,0,1,85,82
+Certified Wood Desk,Home,Certified Wood,0,1,1,1,20,10,0,Paper,5,80,0,0,0,88,86

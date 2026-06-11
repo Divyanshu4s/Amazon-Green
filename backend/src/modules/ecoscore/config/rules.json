@@ -1,0 +1,11 @@
+{
+  "single_use_plastic": -25,
+  "mixed_plastic": -15,
+  "recycled_content_70_plus": 15,
+  "compostable_packaging": 10,
+  "fully_recyclable": 10,
+  "short_lifespan": -10,
+  "heavy_water_usage": -15,
+  "carbon_neutral_shipping": 5,
+  "local_artisan": 10
+}
