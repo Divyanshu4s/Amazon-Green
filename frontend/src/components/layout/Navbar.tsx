@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
   const cartItemCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <nav className="bg-[#131921] text-white w-full z-50 sticky top-0 shadow-xl">
+    <nav className="bg-green-100 text-green-900 w-full z-50 sticky top-0 shadow-xl">
       {/* Top Bar */}
       <div className="flex items-center justify-between px-4 py-3 max-w-[1600px] mx-auto">
         
@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
           
           <Link to="/" className="flex items-center space-x-2 text-2xl font-black tracking-tight hover:opacity-80 transition-opacity">
             <div className="bg-eco-primary p-1.5 rounded-lg flex items-center justify-center">
-              <Leaf className="w-6 h-6 text-white" />
+              <Leaf className="w-6 h-6 text-green-900" />
             </div>
             <span className="font-sans">EcoCart <span className="text-amazon-orange font-bold">AI</span></span>
           </Link>
@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           <Link to="/dashboard" className="flex flex-col items-start hover:text-amazon-orange transition-colors group cursor-pointer">
-            <span className="text-[11px] text-gray-300 group-hover:text-white transition-colors">Hello, {user ? user.name : 'Sign In'}</span>
+            <span className="text-[11px] text-green-700 group-hover:text-green-900 transition-colors">Hello, {user ? user.name : 'Sign In'}</span>
             <span className="text-sm font-bold flex items-center tracking-tight">
               Account & Lists
             </span>
@@ -83,24 +83,24 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Bottom Bar - Categories */}
-      <div className="bg-[#232F3E] text-sm px-4 flex items-center space-x-6 overflow-x-auto whitespace-nowrap shadow-inner border-t border-gray-700">
+      <div className="bg-green-200 text-sm px-4 flex items-center space-x-6 overflow-x-auto whitespace-nowrap shadow-inner border-t border-green-300">
         <div className="max-w-[1600px] mx-auto w-full flex items-center space-x-6 py-2.5">
-          <Link to="/products" className="hover:text-amazon-orange hover:border-white border-transparent border border-solid p-1 rounded-sm font-bold flex items-center transition-all">
+          <Link to="/products" className="hover:text-amazon-orange hover:border-green-900 border-transparent border border-solid p-1 rounded-sm font-bold flex items-center transition-all">
             <Menu className="w-4 h-4 mr-1.5" /> All
           </Link>
           <Link to="/products" className="hover:text-amazon-orange font-bold flex items-center text-eco-secondary">
             <Leaf className="w-4 h-4 mr-1" /> Green Best Sellers
           </Link>
-          <Link to="/products?category=home" className="hover:text-white text-gray-300 font-medium">Eco Home</Link>
-          <Link to="/products?category=fashion" className="hover:text-white text-gray-300 font-medium">Sustainable Fashion</Link>
-          <Link to="/rewards" className="hover:text-white text-gray-300 font-medium">Green Rewards</Link>
-          <Link to="/sellers" className="hover:text-white text-gray-300 font-medium">Verified Green Sellers</Link>
+          <Link to="/products?category=home" className="hover:text-green-900 text-green-800 font-medium">Eco Home</Link>
+          <Link to="/products?category=fashion" className="hover:text-green-900 text-green-800 font-medium">Sustainable Fashion</Link>
+          <Link to="/rewards" className="hover:text-green-900 text-green-800 font-medium">Green Rewards</Link>
+          <Link to="/sellers" className="hover:text-green-900 text-green-800 font-medium">Verified Green Sellers</Link>
         </div>
       </div>
 
       {/* Mobile Menu Placeholder */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#232F3E] p-4 absolute w-full left-0 border-b border-gray-700 shadow-2xl transition-all">
+        <div className="md:hidden bg-green-200 p-4 absolute w-full left-0 border-b border-green-300 shadow-2xl transition-all">
           <div className="flex flex-col space-y-5">
              <div className="flex w-full relative">
               <input 
@@ -112,8 +112,8 @@ export const Navbar: React.FC = () => {
                 <Search className="w-5 h-5" />
               </button>
             </div>
-            <Link to="/products" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-white flex items-center text-lg"><Leaf className="w-5 h-5 mr-3 text-eco-secondary"/> Green Best Sellers</Link>
-            <Link to="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg border-t border-gray-600 pt-4">Account & Lists</Link>
+            <Link to="/products" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-green-900 flex items-center text-lg"><Leaf className="w-5 h-5 mr-3 text-eco-secondary"/> Green Best Sellers</Link>
+            <Link to="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="text-green-900 font-medium text-lg border-t border-green-300 pt-4">Account & Lists</Link>
           </div>
         </div>
       )}
